@@ -15,15 +15,14 @@ int main() {
     // only glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE); // 3.0+ only
 
     // Create window with graphics context
-    GLFWwindow* window =
-      glfwCreateWindow(1280, 720, "Dear ImGui - Test", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(1280, 720, "Dear ImGui - Test", NULL, NULL);
     if (window == NULL)
         return 1;
     glfwMakeContextCurrent(window);
-    glfwSwapInterval(1); // Enable vsync
-                         //
+    glfwSwapInterval(1);  // Enable vsync
+                          //
 
-    if (!gladLoadGLLoader((GLADloadproc) glfwGetProcAddress))
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
         throw("Unable to context to OpenGl");
 
     int screen_width, screen_height;
@@ -36,7 +35,7 @@ int main() {
         glfwPollEvents();
         myimgui.NewFrame();
         myimgui.Update();
-        myimgui.Render();
+        myimgui.Render(window);
         glfwSwapBuffers(window);
     }
     myimgui.Shutdown();
