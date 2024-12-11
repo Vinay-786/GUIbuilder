@@ -1,0 +1,46 @@
+BasedOnStyle: Mozilla
+IndentWidth: 4       # Set indentation to 4 spaces.
+TabWidth: 4          # Ensure tabs are equivalent to 4 spaces.
+UseTab: Never        # Use spaces instead of tabs.
+
+# Ensure the return type is kept on the same line.
+AlwaysBreakAfterReturnType: None
+AlwaysBreakAfterDefinitionReturnType: False
+
+# Align assignments and declarations vertically where possible.
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+
+# Ensure spaces between operators for readability.
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SpaceBeforeParens: ControlStatements
+SpaceAfterCStyleCast: true
+
+# Limit line length to Mozilla's guideline.
+ColumnLimit: 80
+
+# Control breaking function declarations and calls.
+AllowShortFunctionsOnASingleLine: Empty
+AlwaysBreakTemplateDeclarations: Yes
+
+# Indentation of preprocessor directives.
+IndentPPDirectives: AfterHash
+
+# Include sorting (if applicable in your workflow).
+SortIncludes: false
+
+# Wrapping for braces.
+BreakBeforeBraces: Attach  # Keep braces on the same line as the function/control statement.
+
+# Namespace formatting.
+NamespaceIndentation: None
+
+# Pointer alignment.
+PointerAlignment: Left
+
+# Other fine-grained configurations.
+AllowShortBlocksOnASingleLine: Always
+AllowShortIfStatementsOnASingleLine: Never
+BreakConstructorInitializers: BeforeComma
+ConstructorInitializerIndentWidth: 4
